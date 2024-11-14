@@ -4,7 +4,7 @@ import pandas as pd
 from torch.utils.data import DataLoader
 
 class DataManager:
-    def __init__(self, target, path="raw_data"):
+    def __init__(self, target, path="data/raw_data"):
         self.target = target
         self.path = path
         self.files = [os.path.splitext(f)[0] for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
